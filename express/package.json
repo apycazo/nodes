@@ -1,0 +1,16 @@
+{
+  "name": "express-reference",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "cookie-parser": "*",
+    "morgan": "*",
+    "body-parser" : "*",
+    "express-session" : "*",
+    "method-override" : "*"
+  }
+}
