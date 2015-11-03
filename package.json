@@ -1,8 +1,9 @@
 {
-  "name": "demo-deps",
+  "name": "dependencies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "winston": "2.0.1",
     "express": "4.13.3",
     "cookie-parser": "1.4.0",
     "morgan": "1.6.1",

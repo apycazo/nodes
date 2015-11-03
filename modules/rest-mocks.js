@@ -28,6 +28,9 @@ module.exports = function (app) {
       .get(function (req, res) {
          var id = req.params.id;
          if (typeof id == 'undefined') res.send(store);
+         else if (typeof store[id] == 'undefined') {
+            res.status(404).json({success : false, error : 'ID does not exist'});
+         }
          else res.send(store[id]);
       })
       .post(function (req, res) {
