@@ -7,6 +7,9 @@
 // "lokijs" : "1.3.10"
 // }
 
+// options: results.offset(10).limit(5).data() [to limit queries]
+// find one: col.findOne("age", 30);
+
 var loki = require('lokijs');
 var db = new loki('db.json');
 
@@ -67,6 +70,12 @@ function load_and_test_after_saving () {
    var users2 = db.getCollection('users');
    var result = users2.get(2);
    console.log('\nFetch (again) user with id: 3\n' + JSON.stringify(result));
+
+   // Count (sort of)
+   console.log('\nCollection users has ' + users2.find().length + ' entries');
+
+   // Done
+   console.log('Demo test complete');
 }
 
 db.save(load_and_test_after_saving);
